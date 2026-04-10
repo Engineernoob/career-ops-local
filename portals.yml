@@ -16,7 +16,7 @@ title_filter:
     - staff
     - senior
     - principal
-    - manager    # remove this line if targeting EM roles
+    - manager # remove this line if targeting EM roles
     - recruiter
 
 companies:
@@ -117,6 +117,92 @@ companies:
     lever_slug: descript
     tier: 2
 
+  # ── Dev Tools / Code Intelligence ─────────────────────────────────
+  - name: Sourcegraph
+    greenhouse_slug: sourcegraph91
+    tier: 1
+    note: "Code intelligence platform — Go, TypeScript, GraphQL, tree-sitter (Noir overlap)"
+
+  - name: Coder
+    greenhouse_slug: coder
+    tier: 1
+    note: "Self-hosted remote dev environments — Go, TypeScript, React, Kubernetes (strong fit)"
+
+  - name: Warp
+    greenhouse_slug: warp
+    tier: 1
+    note: "Agentic terminal — Rust, TypeScript (Noir overlap, strong fit)"
+
+  - name: Zed Industries
+    ashby_slug: zed-industries
+    tier: 1
+    note: "Rust code editor — Rust, systems (very aligned with Noir)"
+
+  - name: Trunk
+    greenhouse_slug: trunk-tools
+    tier: 2
+    note: "CI reliability platform — TypeScript, React, Next.js, Node.js, AWS"
+
+  # ── AI Infrastructure / Context / Memory ──────────────────────────
+  - name: Zep AI
+    career_url: https://www.getzep.com/careers
+    tier: 1
+    note: "Context engineering for AI agents — RAG, embeddings, sub-200ms retrieval (PatchPilot overlap)"
+
+  - name: LiveKit
+    ashby_slug: livekit
+    tier: 1
+    note: "Real-time voice AI infra — Go, TypeScript, WebRTC (macOS assistant overlap)"
+
+  - name: ReadMe
+    ashby_slug: readme
+    tier: 1
+    note: "Developer hub platform — RAG, retrieval, TypeScript, OpenAPI (strong AI fit)"
+
+  - name: Baseten
+    ashby_slug: baseten
+    tier: 1
+    vc: Sequoia
+    note: "ML model serving — Python, Go, Kubernetes, inference infra"
+
+  # ── Fintech / Vertical SaaS ────────────────────────────────────────
+  - name: Ambrook
+    ashby_slug: ambrook
+    tier: 1
+    note: "Agrifintech — TypeScript, React, Next.js, PostgreSQL (applied)"
+
+  - name: Owner
+    greenhouse_slug: owner-com
+    tier: 2
+    note: "AI growth platform for restaurants — TypeScript, Next.js, Node.js, MongoDB"
+
+  # ── Identity / Security ────────────────────────────────────────────
+  - name: SpruceID
+    lever_slug: sprucesystems
+    tier: 1
+    note: "Privacy-preserving digital identity — Rust, Go, TypeScript (new grad friendly)"
+
+  - name: Pangolin
+    career_url: https://docs.pangolin.net/careers/software-engineer-full-stack
+    tier: 2
+    note: "Identity-aware VPN, self-hosted — TypeScript, open source (YC S25)"
+
+  # ── Data Infrastructure ────────────────────────────────────────────
+  - name: Estuary
+    career_url: https://estuary.dev/careers
+    tier: 1
+    note: "Real-time data replication — Go, Rust, CDC pipelines (Series A)"
+
+  - name: Trace Labs
+    career_url: https://tracelabs.ai
+    tier: 1
+    note: "Physical AI data marketplace — small senior team, robotics training data"
+
+  # ── Game / Consumer ────────────────────────────────────────────────
+  - name: Colonist
+    career_url: https://colonist.io/careers
+    tier: 2
+    note: "Digital board game platform — Node.js, TypeScript, React, 60M games/year (applied)"
 
   # ── a16z Portfolio ─────────────────────────────────────────────────
   - name: Glean
