@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Generated outputs
+output/
+reports/
+jds/
+
+# Environment / secrets
+.env
+.env.*
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log

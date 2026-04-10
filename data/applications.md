@@ -15,3 +15,8 @@
 | 12 | 2026-04-06 | Loula | Founding Software Engineer at Loula | Y Combinator's Work at a Startup | 4.2/5 | Evaluated | ✅ | [12](reports/012-loula-2026-04-06.md) | This opportunity aligns with the candidate's skills and experience in AI, ML, an |
 | 13 | 2026-04-06 | SpruceID | Full-Stack Software Engineer – Remote at SpruceID | Y Combinator's Work at a Startup | 4.2/5 | Evaluated | ✅ | [13](reports/013-spruceid-2026-04-06.md) | This Full-Stack Software Engineer role at SpruceID aligns with the candidate's s |
 | 14 | 2026-04-10 | Sourcegraph91 | Software Engineer - Code Understanding [IC2] | 3.8/5 | Evaluated | ✅ | [14](reports/014-sourcegraph91-2026-04-10.md) | This role at Sourcegraph aligns with Taahirah's skills and experience in softwar |
+| 15 | 2026-04-10 | Anthropic | Network Engineer, Capacity and Efficiency | 0.0/5 | Evaluated | ✅ | [15](reports/015-anthropic-2026-04-10.md) | Score 0.0/5 |
+| 16 | 2026-04-10 | Anthropic | Software Engineer, Backend | 4.2/5 | Evaluated | ✅ | [16](reports/016-anthropic-2026-04-10.md) | Highly skilled backend software engineer with production experience building dis |
+| 17 | 2026-04-10 | Anthropic | Software Engineer, Full-stack | 4.2/5 | Evaluated | ✅ | [17](reports/017-anthropic-2026-04-10.md) | Highly skilled software engineer with production experience in building distribu |
+| 18 | 2026-04-10 | Anthropic | Software Engineer, Platform | 0.0/5 | Evaluated | ✅ | [18](reports/018-anthropic-2026-04-10.md) | Score 0.0/5 |
+| 19 | 2026-04-10 | Anthropic | Software Engineer, UI Platform | 4.2/5 | Evaluated | ✅ | [19](reports/019-anthropic-2026-04-10.md) | Score 4.2/5 |
