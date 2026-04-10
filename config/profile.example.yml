@@ -1,0 +1,46 @@
+# Career-Ops Profile Configuration
+# Copy this to config/profile.yml and fill in your details
+# Run: python ops.py setup  (will do this for you interactively)
+
+name: "Your Full Name"
+email: "you@email.com"
+location: "San Francisco, CA"   # or "Remote"
+
+target_roles:
+  - "Staff Engineer"
+  - "Senior Software Engineer"
+  - "Principal Engineer"
+
+salary_target: "$180k-$220k"
+
+# Ollama model to use for evaluations
+# Fast: llama3.2, mistral
+# Better: qwen2.5, qwen2.5:14b
+# Best (needs GPU): llama3.1:70b
+ollama_model: "llama3.2"
+
+# Preferred company stage
+# Options: seed, early, growth, public
+preferred_stage: "growth"
+
+# Remote preference
+# Options: remote-first, hybrid, on-site
+remote_preference: "remote-first"
+
+# Minimum score to apply (0.0-5.0)
+# System will warn if you try to apply below this
+apply_threshold: 3.0
+
+# ── Daemon / automation config (set by install.py) ───────────────────────────
+daemon:
+  # How many hours between portal scans
+  scan_interval_hours: 12
+
+  # Max offers to evaluate per daemon run (controls runtime)
+  max_evaluations_per_run: 8
+
+  # Max new job URLs to add to pipeline per scan
+  max_new_jobs_per_scan: 20
+
+  # Parallel evaluation workers (2 is safe; raise to 3 on fast machines)
+  parallel_workers: 2

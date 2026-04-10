@@ -1,0 +1,11 @@
+name: "Taahirah Denmark"
+email: "taahirah_d@icloud.com"
+location: "Remote"
+target_roles:
+  - "Software Engineer"
+  - "Backend Engineer"
+  - "AI Engineer"
+salary_target: "$95k-$180k"
+ollama_model: "llama3.2:latest"
+preferred_stage: "growth"  # seed / growth / public
+remote_preference: "remote-first"  # remote-first / hybrid / on-site

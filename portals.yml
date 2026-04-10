@@ -1,0 +1,388 @@
+# Job Portal Configuration
+# Edit this file to customize your target companies and role filters.
+
+title_filter:
+  positive:
+    - engineer
+    - developer
+    - architect
+    - platform
+    - infrastructure
+    - backend
+    - fullstack
+    - associate
+    - junior
+  negative:
+    - staff
+    - senior
+    - principal
+    - manager    # remove this line if targeting EM roles
+    - recruiter
+
+companies:
+  # AI / Developer Tools
+  - name: Anthropic
+    greenhouse_slug: anthropic
+    tier: 1
+  - name: OpenAI
+    greenhouse_slug: openai
+    tier: 1
+  - name: Mistral AI
+    lever_slug: mistral
+    tier: 1
+  - name: Cohere
+    greenhouse_slug: cohere
+    tier: 1
+  - name: Together AI
+    ashby_slug: together-ai
+    tier: 1
+  - name: Replicate
+    lever_slug: replicate
+    tier: 2
+  - name: Hugging Face
+    lever_slug: hugging-face
+    tier: 1
+  - name: Groq
+    ashby_slug: groq
+    tier: 1
+
+  # Developer Infrastructure
+  - name: Vercel
+    lever_slug: vercel
+    tier: 1
+  - name: Railway
+    ashby_slug: railway
+    tier: 2
+  - name: Render
+    lever_slug: render
+    tier: 2
+  - name: Fly.io
+    lever_slug: fly-io
+    tier: 2
+  - name: Cloudflare
+    greenhouse_slug: cloudflare
+    tier: 1
+  - name: Fastly
+    greenhouse_slug: fastly
+    tier: 2
+  - name: PlanetScale
+    lever_slug: planetscale
+    tier: 2
+
+  # Product / SaaS
+  - name: Linear
+    ashby_slug: linear
+    tier: 1
+  - name: Notion
+    greenhouse_slug: notion
+    tier: 1
+  - name: Loom
+    greenhouse_slug: loom
+    tier: 2
+  - name: Retool
+    greenhouse_slug: retool
+    tier: 1
+  - name: Airtable
+    greenhouse_slug: airtable
+    tier: 2
+  - name: Figma
+    greenhouse_slug: figma
+    tier: 1
+
+  # Fintech
+  - name: Stripe
+    greenhouse_slug: stripe
+    tier: 1
+  - name: Plaid
+    greenhouse_slug: plaid
+    tier: 1
+  - name: Brex
+    greenhouse_slug: brex
+    tier: 2
+  - name: Mercury
+    greenhouse_slug: mercury
+    tier: 2
+
+  # Growth-stage / custom career pages
+  - name: ElevenLabs
+    ashby_slug: elevenlabs
+    tier: 1
+  - name: Cursor
+    ashby_slug: anysphere
+    tier: 1
+  - name: n8n
+    ashby_slug: n8n
+    tier: 2
+  - name: Descript
+    lever_slug: descript
+    tier: 2
+
+
+  # ── a16z Portfolio ─────────────────────────────────────────────────
+  - name: Glean
+    greenhouse_slug: glean
+    tier: 1
+    vc: a16z
+    note: "Enterprise AI search — RAG, embeddings, Python backend"
+  - name: Sierra
+    ashby_slug: sierra
+    tier: 1
+    vc: a16z
+    note: "Autonomous AI agents — Python, distributed systems"
+  - name: Decagon
+    ashby_slug: decagon
+    tier: 1
+    vc: a16z
+    note: "AI concierge platform — LLM, agent infra, backend"
+  - name: Harvey
+    greenhouse_slug: harvey
+    tier: 1
+    vc: a16z
+    note: "AI for legal — LLM infra, Python backend"
+  - name: Perplexity
+    greenhouse_slug: perplexity-ai
+    tier: 1
+    vc: a16z
+    note: "AI answer engine — Python, distributed backend"
+  - name: Character AI
+    greenhouse_slug: character
+    tier: 1
+    vc: a16z
+    note: "LLM product — ML infra, backend systems"
+  - name: Letta
+    ashby_slug: letta
+    tier: 2
+    vc: a16z
+    note: "Stateful LLM agents (MemGPT) — Python, AI infra"
+  - name: Replit
+    greenhouse_slug: replit
+    tier: 1
+    vc: a16z
+    note: "Browser IDE + AI coding — backend, infra"
+  - name: Weights & Biases
+    lever_slug: wandb
+    tier: 1
+    vc: a16z
+    note: "MLOps platform — Python backend, experiment tracking"
+  - name: Modal
+    ashby_slug: modal-labs
+    tier: 1
+    vc: a16z
+    note: "Serverless GPU infra — Python, distributed systems"
+  - name: Temporal
+    greenhouse_slug: temporal-technologies
+    tier: 1
+    vc: a16z
+    note: "Workflow orchestration — Go/Python, distributed systems"
+  - name: Buf
+    ashby_slug: buf
+    tier: 2
+    vc: a16z
+    note: "Protobuf/API platform — developer tooling, backend"
+
+  # ── Sequoia Portfolio ──────────────────────────────────────────────
+  - name: Coreweave
+    greenhouse_slug: coreweave
+    tier: 1
+    vc: Sequoia
+    note: "GPU cloud provider — infra, distributed systems, Go"
+  - name: Scale AI
+    greenhouse_slug: scaleai
+    tier: 1
+    vc: Sequoia
+    note: "AI data platform — Python, ML infra, backend"
+  - name: Warp
+    ashby_slug: warp
+    tier: 1
+    vc: Sequoia
+    note: "Rust terminal — systems, Rust (aligned with Noir)"
+  - name: Statsig
+    greenhouse_slug: statsig
+    tier: 2
+    vc: Sequoia
+    note: "A/B testing infra — backend, data systems, Node.js"
+  - name: Hex
+    greenhouse_slug: hex-technologies
+    tier: 2
+    vc: Sequoia
+    note: "Collaborative analytics — Python backend"
+  - name: Baseten
+    ashby_slug: baseten
+    tier: 1
+    vc: Sequoia
+    note: "ML model serving — Python, infra, deployment"
+  - name: Vanta
+    greenhouse_slug: vanta
+    tier: 2
+    vc: Sequoia
+    note: "Security automation — backend, Node.js, APIs"
+  - name: Deel
+    greenhouse_slug: deel
+    tier: 1
+    vc: Sequoia
+    note: "Global payroll — distributed backend, Python"
+
+  # ── General Catalyst Portfolio ─────────────────────────────────────
+  - name: Codeium
+    ashby_slug: codeium
+    tier: 1
+    vc: GC
+    note: "AI code editor (Windsurf) — Python, ML infra, dev tooling"
+  - name: LangChain
+    ashby_slug: langchain
+    tier: 1
+    vc: GC
+    note: "LLM framework — Python, AI infra, open source"
+
+  # ── Benchmark Portfolio ────────────────────────────────────────────
+  - name: Discord
+    greenhouse_slug: discord
+    tier: 1
+    vc: Benchmark
+    note: "Real-time messaging platform — backend, distributed, Rust"
+  - name: Cockroach Labs
+    greenhouse_slug: cockroach-labs
+    tier: 1
+    vc: Benchmark
+    note: "Distributed SQL — Go, systems programming"
+  - name: Netlify
+    greenhouse_slug: netlify
+    tier: 2
+    vc: Benchmark
+    note: "Web platform / edge — backend, Node.js"
+
+  # ── Lightspeed Portfolio ───────────────────────────────────────────
+  - name: Grafana Labs
+    greenhouse_slug: grafana-labs
+    tier: 1
+    vc: Lightspeed
+    note: "Observability — Go backend, distributed systems"
+  - name: Unstructured
+    ashby_slug: unstructured-io
+    tier: 1
+    vc: Lightspeed
+    note: "Document parsing for LLMs — Python, AI infra, NLP"
+
+  # ── Kleiner Perkins Portfolio ──────────────────────────────────────
+  - name: Rippling
+    lever_slug: rippling
+    tier: 1
+    vc: KP
+    note: "HR/IT platform — backend, distributed, Python/Node.js"
+
+  # ── YC Portfolio (recent batches — AI / backend focus) ──────────────
+  - name: Resend
+    ashby_slug: resend
+    tier: 1
+    vc: YC W23
+    note: "Email API for devs — TypeScript, Node.js, developer tooling"
+  - name: Turso
+    ashby_slug: turso
+    tier: 1
+    vc: YC W23
+    note: "Distributed SQLite — Rust, edge databases"
+  - name: Exa
+    ashby_slug: exa
+    tier: 1
+    vc: YC S21
+    note: "Neural search API — Python, ML infra, embeddings"
+  - name: Inngest
+    ashby_slug: inngest
+    tier: 2
+    vc: YC W22
+    note: "Durable functions / event-driven — TypeScript, backend"
+  - name: Browserbase
+    ashby_slug: browserbase
+    tier: 1
+    vc: YC W24
+    note: "Headless browser infra — TypeScript, Playwright, backend"
+  - name: Neon
+    lever_slug: neon-tech
+    tier: 1
+    vc: YC S22
+    note: "Serverless Postgres — Rust, distributed databases"
+  - name: Zed Industries
+    ashby_slug: zed-industries
+    tier: 1
+    vc: YC
+    note: "Rust code editor — Rust, systems (very aligned with Noir)"
+  - name: Pydantic
+    ashby_slug: pydantic
+    tier: 1
+    vc: YC W24
+    note: "Python validation / Logfire — Python, developer tooling"
+  - name: Tinybird
+    ashby_slug: tinybird
+    tier: 2
+    vc: YC S21
+    note: "Real-time data APIs — Python, ClickHouse, pipelines"
+  - name: Speakeasy
+    ashby_slug: speakeasyapi
+    tier: 2
+    vc: YC S22
+    note: "SDK generation / API tooling — Go, developer tooling"
+  - name: Depot
+    ashby_slug: depot
+    tier: 2
+    vc: YC W23
+    note: "Fast Docker builds — Go, infra, CI/CD"
+  - name: Infisical
+    ashby_slug: infisical
+    tier: 1
+    vc: YC W23
+    note: "Secrets management — Go, Node.js, security backend"
+
+  # ── Accel Portfolio ────────────────────────────────────────────────
+  - name: Sentry
+    greenhouse_slug: sentry
+    tier: 1
+    vc: Accel
+    note: "Error monitoring — Python, backend, distributed"
+  - name: Incident.io
+    ashby_slug: incident-io
+    tier: 1
+    vc: Accel
+    note: "Incident management — Go backend, developer tooling"
+  - name: Clerk
+    ashby_slug: clerk
+    tier: 1
+    vc: Accel
+    note: "Auth platform — TypeScript, Node.js, APIs"
+
+  # ── Other top-tier AI / Dev Infra ──────────────────────────────────
+  - name: Supabase
+    greenhouse_slug: supabase
+    tier: 1
+    vc: Coatue
+    note: "Open-source Firebase — PostgreSQL, Go, TypeScript"
+  - name: Prisma
+    ashby_slug: prisma
+    tier: 1
+    vc: Amplify
+    note: "ORM / data platform — TypeScript, Node.js, databases"
+  - name: Dagger
+    lever_slug: dagger
+    tier: 1
+    vc: Redpoint
+    note: "Programmable CI/CD — Go, developer tooling, containers"
+  - name: Qdrant
+    greenhouse_slug: qdrant
+    tier: 1
+    vc: Unusual
+    note: "Vector database — Rust, ML infra, embeddings"
+  - name: Chroma
+    ashby_slug: chroma
+    tier: 1
+    vc: Quiet Cap
+    note: "Open-source vector DB — Python, AI infra, NLP"
+
+  # Examples using Workable, Wellfound, or custom career pages:
+  # - name: Acme Corp
+  #   workable_slug: acme-corp        # from apply.workable.com/acme-corp
+  #   tier: 2
+  # - name: YC Startup
+  #   wellfound_slug: yc-startup      # from wellfound.com/company/yc-startup
+  #   tier: 2
+  # - name: Custom Company
+  #   career_url: https://company.com/careers   # Playwright scrapes this page
+  #   tier: 2

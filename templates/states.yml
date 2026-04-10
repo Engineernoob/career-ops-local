@@ -1,0 +1,42 @@
+# Canonical application states
+# Source of truth for data/applications.md Status column
+# Do not add custom statuses — use Notes column for detail
+
+states:
+  - name: Evaluated
+    description: Report completed, pending your decision to apply or skip
+    terminal: false
+
+  - name: Applied
+    description: Application submitted — you reviewed and sent it
+    terminal: false
+
+  - name: Responded
+    description: Company reached out (recruiter screen, email, etc.)
+    terminal: false
+
+  - name: Interview
+    description: Active interview process underway
+    terminal: false
+
+  - name: Offer
+    description: Offer received
+    terminal: false
+
+  - name: Rejected
+    description: Company rejected the application
+    terminal: true
+
+  - name: Discarded
+    description: You chose not to proceed (low score, offer withdrawn, etc.)
+    terminal: true
+
+  - name: SKIP
+    description: System recommended skipping — score below threshold or poor fit
+    terminal: true
+
+rules:
+  - No markdown bold (**) in the status field
+  - No dates in the status field — use the date column
+  - No extra text in the status field — use the notes column
+  - NEVER create a new entry if company+role already exists — update the existing row

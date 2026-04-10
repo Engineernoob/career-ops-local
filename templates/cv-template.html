@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<style>
+  /* ── Reset ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ── Page ── */
+  @page {
+    size: Letter;
+    margin: 0.55in 0.6in;
+  }
+  body {
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* ── Header / Name block ── */
+  .header {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #1a2744;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #1a2744;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+  .contact {
+    font-size: 9pt;
+    color: #555;
+    line-height: 1.6;
+  }
+  .contact a { color: #2c4a8a; text-decoration: none; }
+
+  /* ── Section headings ── */
+  h2 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #2c4a8a;
+    border-bottom: 1px solid #dde3f0;
+    padding-bottom: 3px;
+    margin: 18px 0 9px;
+  }
+
+  /* ── Job entries ── */
+  h3 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0;
+  }
+  .meta {
+    font-size: 9pt;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+
+  /* ── Body text ── */
+  p {
+    margin-bottom: 6px;
+    font-size: 10pt;
+  }
+
+  /* ── Lists ── */
+  ul {
+    padding-left: 14px;
+    margin-bottom: 10px;
+  }
+  li {
+    margin-bottom: 3px;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+  li::marker { color: #2c4a8a; }
+
+  /* ── Skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 20px;
+    margin-bottom: 4px;
+  }
+  .skill-line {
+    font-size: 9.5pt;
+    color: #222;
+  }
+  .skill-label {
+    font-weight: 600;
+    color: #1a2744;
+  }
+
+  /* ── Summary ── */
+  .summary {
+    font-size: 10pt;
+    color: #222;
+    line-height: 1.6;
+    margin-bottom: 4px;
+  }
+
+  /* ── Print utilities ── */
+  @media print {
+    body { padding: 0; }
+    a { color: inherit; }
+    h2 { page-break-after: avoid; }
+    h3 { page-break-after: avoid; }
+  }
+
+  /* ── Markdown output cleanup ── */
+  /* When markdown parser wraps paragraphs inside li, flatten them */
+  li > p { margin-bottom: 2px; }
+  /* em inside bullets */
+  li em { font-style: italic; color: #444; }
+  /* strong */
+  strong { color: #111; }
+  /* hr — used as section divider in some MD outputs */
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 12px 0; }
+</style>
+</head>
+<body>
+
+{{CONTENT}}
+
+</body>
+</html>
