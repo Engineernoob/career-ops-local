@@ -20,3 +20,9 @@
 | 17 | 2026-04-10 | Anthropic | Software Engineer, Full-stack | 4.2/5 | Evaluated | ✅ | [17](reports/017-anthropic-2026-04-10.md) | Highly skilled software engineer with production experience in building distribu |
 | 18 | 2026-04-10 | Anthropic | Software Engineer, Platform | 0.0/5 | Evaluated | ✅ | [18](reports/018-anthropic-2026-04-10.md) | Score 0.0/5 |
 | 19 | 2026-04-10 | Anthropic | Software Engineer, UI Platform | 4.2/5 | Evaluated | ✅ | [19](reports/019-anthropic-2026-04-10.md) | Score 4.2/5 |
+| 21 | 2026-04-10 | Sourcegraph91 | Support Engineer - US East [IC2]  | 3.8/5 | Evaluated | ✅ | [21](reports/021-sourcegraph91-2026-04-10.md) | This role is a good fit for Taahirah, with a score of 3.8/5. The company's missi |
+| 22 | 2026-04-10 | Warp | Analytics Engineer | 3.8/5 | Evaluated | ✅ | [22](reports/022-warp-2026-04-10.md) | This role at Warp aligns with Taahirah's skills and experience, particularly in |
+| 23 | 2026-04-10 | Warp | Implementation Engineer | 4.2/5 | Evaluated | ✅ | [23](reports/023-warp-2026-04-10.md) | This Implementation Engineer role at Warp aligns with Taahirah's skills and expe |
+| 24 | 2026-04-10 | Warp | Software Engineer | 3.8/5 | Evaluated | ✅ | [24](reports/024-warp-2026-04-10.md) | This role aligns with Taahirah's skills and interests, particularly in AI-driven |
+| 25 | 2026-04-10 | ... | Job Description | 4.2/5 | Evaluated | ❌ | [25](reports/025--2026-04-10.md) | This opportunity aligns with Taahirah's growth stage preference and remote-first |
+| 26 | 2026-04-10 | ... | ... | 4.2/5 | Evaluated | ✅ | [26](reports/026--2026-04-10.md) | This opportunity aligns with Taahirah's growth stage preference and remote-first |

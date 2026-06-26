@@ -5,13 +5,30 @@
 
 Inspired by [santifer/career-ops](https://github.com/santifer/career-ops) — rebuilt from the ground up for local LLMs.
 
-```
-╔═══════════════════════════════════════════════════════════════╗
-║  Paste a URL.                                                 ║
-║  Get a score (0–5), a report, and a tailored PDF resume.      ║
-║  Track everything in one place.                               ║
-║  AI filters noise. You make decisions.                        ║
-╚═══════════════════════════════════════════════════════════════╝
+## Architecture at a Glance
+
+```text
+                    Job URL / Company Scan
+                              │
+                              ▼
+                     Job Description Parser
+                              │
+                              ▼
+                     Local LLM (Ollama)
+                              │
+      ┌───────────────┬───────────────┬───────────────┐
+      ▼               ▼               ▼
+ Job Evaluation   Resume Tailoring  Company Research
+      │               │               │
+      └───────────────┼───────────────┘
+                      ▼
+             Interview Preparation
+                      │
+                      ▼
+             Markdown Reports + PDF Resume
+                      │
+                      ▼
+            Application Tracker (Markdown)
 ```
 
 ---
@@ -31,6 +48,24 @@ Everything runs locally. The model that evaluates your CV never sees the interne
 
 ---
 
+## Typical Workflow
+
+A typical application flows through the following stages:
+
+1. Discover a job through a supported job board.
+2. Parse and normalize the job description.
+3. Evaluate the opportunity using a local LLM.
+4. Score the role across ten weighted dimensions.
+5. Tailor your resume for the position.
+6. Generate a detailed evaluation report.
+7. Research the company.
+8. Build interview preparation materials.
+9. Track the application throughout the hiring process.
+
+Every stage runs locally using Ollama. No application data is sent to external AI services.
+
+---
+
 ## Philosophy (same as the original)
 
 > AI evaluates and recommends. You decide and act. The system never submits an application — you always have the final call.
@@ -46,6 +81,7 @@ This is not a spray-and-pray bot. Career-ops is a **filter** — it helps you fi
 - A pulled model: `ollama pull llama3.2` (or `mistral`, `qwen2.5`, `phi4`, etc.)
 
 Optional for PDF generation:
+
 - `pip install weasyprint` — renders HTML→PDF locally
 - Without it, career-ops saves `.html` files you can print to PDF from any browser
 
@@ -72,6 +108,7 @@ python ops.py setup
 ```
 
 Setup will:
+
 - Prompt you to paste your CV in markdown format
 - Ask for your name, target roles, salary range, preferred model
 - Create `config/profile.yml`, `portals.yml`, `data/applications.md`, `data/pipeline.md`
@@ -269,11 +306,12 @@ Edit `portals.yml`:
 ```yaml
 companies:
   - name: Your Target Company
-    greenhouse_slug: their-greenhouse-slug   # from their Greenhouse URL
+    greenhouse_slug: their-greenhouse-slug # from their Greenhouse URL
     tier: 1
 ```
 
 Find the slug from the company's job board URL:
+
 - Greenhouse: `boards.greenhouse.io/{slug}/jobs`
 - Lever: `jobs.lever.co/{slug}/`
 - Ashby: `jobs.ashbyhq.com/{slug}/`
@@ -291,8 +329,9 @@ The only required placeholder is `{{CONTENT}}` where the CV body goes.
 ### Switch Ollama model
 
 Edit `config/profile.yml`:
+
 ```yaml
-ollama_model: "qwen2.5"   # or phi4, mistral, llama3.1:70b, etc.
+ollama_model: "qwen2.5" # or phi4, mistral, llama3.1:70b, etc.
 ```
 
 Larger models give better evaluation quality but take longer.
@@ -312,29 +351,68 @@ Larger models give better evaluation quality but take longer.
 
 ## Performance
 
-| Model | Avg evaluation time | Quality |
-|-------|--------------------|---------| 
-| llama3.2 (3B) | ~20–40s | Good |
-| mistral (7B) | ~30–60s | Good |
-| qwen2.5 (7B) | ~30–60s | Very good |
-| qwen2.5:14b | ~60–120s | Excellent |
-| llama3.1:70b | ~3–5min | Best (if you have the VRAM) |
+| Model         | Avg evaluation time | Quality                     |
+| ------------- | ------------------- | --------------------------- |
+| llama3.2 (3B) | ~20–40s             | Good                        |
+| mistral (7B)  | ~30–60s             | Good                        |
+| qwen2.5 (7B)  | ~30–60s             | Very good                   |
+| qwen2.5:14b   | ~60–120s            | Excellent                   |
+| llama3.1:70b  | ~3–5min             | Best (if you have the VRAM) |
 
 Batch mode runs 3 workers in parallel — 10 offers ≈ 5–15 minutes depending on model.
 
 ---
 
+## Documentation
+
+Additional documentation is available in the `docs/` directory.
+
+- Architecture
+- Getting Started
+- Configuration
+- CLI Reference
+- Resume Tailoring
+- Interview Preparation
+- Company Research
+- Troubleshooting
+- FAQ
+
+---
+
+## Roadmap
+
+### Current
+
+- [x] Local LLM evaluation
+- [x] ATS resume tailoring
+- [x] Company research
+- [x] Interview preparation
+- [x] Salary negotiation scripts
+- [x] Application tracking
+
+### Planned
+
+- [ ] LinkedIn importer
+- [ ] Browser extension
+- [ ] Resume version comparison
+- [ ] Multi-model evaluation
+- [ ] Recruiter CRM integration
+- [ ] Analytics dashboard
+- [ ] Desktop application
+
+---
+
 ## Differences from santifer/career-ops
 
-| Feature | career-ops (original) | career-ops-local |
-|---------|----------------------|------------------|
-| AI engine | Claude Code (Anthropic) | Local Ollama models |
-| PDF generation | Puppeteer (Node.js) | WeasyPrint (Python) |
-| Runtime | Node.js + mjs | Python only |
-| Data privacy | Sent to Anthropic API | Fully local |
-| Cost | Anthropic API credits | Free (after hardware) |
-| Setup | `npm install` + `claude` | `pip install` + `ollama pull` |
-| Skill files | `.md` files read by Claude Code | `.md` files loaded as system prompts |
+| Feature        | career-ops (original)           | career-ops-local                     |
+| -------------- | ------------------------------- | ------------------------------------ |
+| AI engine      | Claude Code (Anthropic)         | Local Ollama models                  |
+| PDF generation | Puppeteer (Node.js)             | WeasyPrint (Python)                  |
+| Runtime        | Node.js + mjs                   | Python only                          |
+| Data privacy   | Sent to Anthropic API           | Fully local                          |
+| Cost           | Anthropic API credits           | Free (after hardware)                |
+| Setup          | `npm install` + `claude`        | `pip install` + `ollama pull`        |
+| Skill files    | `.md` files read by Claude Code | `.md` files loaded as system prompts |
 
 The architecture philosophy is identical: scoped skill files, markdown as data layer, YAML config, HITL design.
 
